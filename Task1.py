@@ -5,7 +5,8 @@
 
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-from random import randint
+# from random import randint
+import random
 
 
 def check_num():
@@ -19,11 +20,8 @@ def check_num():
 
 def get_list():
     num = check_num()
-    list1 = [randint(-9, 9) for i in range(num)]
+    list1 = [random.randint(-9, 9) for i in range(num)]
     return list1
-
-
-# print(get_list())
 
 
 def sum_odd_number(list1: list) -> int:
@@ -33,7 +31,8 @@ def sum_odd_number(list1: list) -> int:
             sum += list1[i]
     return sum
 
-lst = get_list() 
-print(lst)
-sum_odd = sum_odd_number(lst)
-print(sum_odd)
+if __name__ == '__main__':
+    lst = get_list()
+    print(lst)
+    sum_odd = sum_odd_number(lst)
+    print(sum_odd)
